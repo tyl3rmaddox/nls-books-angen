@@ -1,0 +1,263 @@
+body {
+    margin-top: 50px;
+}
+
+#subHeading {
+    position: fixed;
+    left: 1270px;
+    top: 610px;
+    text-align: center;
+}
+
+#imgHeading {
+    position: fixed;
+    left: 1365px;
+    top: 60px;
+}
+
+#toolbar {
+    margin-left: 150px;
+    display: inline-flex
+
+}
+
+#openClose {
+    width: 1000px;
+    border: 5px solid rgb(100, 93, 93);
+    padding: 20px;
+    margin-left: 150px;
+}
+
+#openCloseMultibook {
+    width: 1000px;
+    border: 5px solid rgb(100, 93, 93);
+    padding: 20px;
+    margin-left: 150px;
+}
+
+#opfButtonLabel {
+    margin-top: 8px;
+}
+
+#opfButton {
+    max-width: 195px;
+    padding: 20px;
+    border: 2px solid rgba(100, 93, 93, 0.600);
+    box-shadow: 1px 1px 10px rgb(7, 7, 7);
+}
+
+#levelSelectorLabel {
+    margin: 1px;
+}
+
+#levelSelector {
+    margin-left: 27px;
+    padding: 20px;
+    border: 2px solid rgba(100, 93, 93, 0.600);
+    box-shadow: 1px 1px 10px rgb(7, 7, 7);
+}
+
+#dtbTypeDiv {
+    margin-left: 25px;
+    padding: 20px;
+    border: 2px solid rgba(100, 93, 93, 0.600);
+    box-shadow: 1px 1px 10px rgb(7, 7, 7);
+}
+
+#specialsDiv {
+    margin-left: 25px;
+    padding: 20px;
+    border: 2px solid rgba(100, 93, 93, 0.600);
+    box-shadow: 1px 1px 10px rgb(7, 7, 7);
+}
+
+#readersNote {
+    padding-top: 10px;
+}
+
+#narratorDiv {
+    padding: 1px;
+    max-width: 160px;
+    margin-left: 23px;
+    padding: 8px;
+    border: 2px solid rgba(100, 93, 93, 0.600);
+    box-shadow: 1px 1px 10px rgb(7, 7, 7);
+}
+
+#dtbTypeLabel {
+    margin-top:1px;
+    margin-bottom: 7px;
+}
+
+#specialsLabel {
+    margin-top:1px;
+    margin-bottom: 7px;
+}
+
+#narratorSelectorLabel {
+    margin-top:20px;
+    margin-left: 12px;
+    margin-bottom: 7px;
+}
+
+#narratorSelect {
+    margin-top: 10px;
+    margin-left: 7px;
+    padding: 3px;
+}
+
+#copyButton {
+    max-width: 60px;
+    position: fixed;
+    left: 1260px;
+    top: 55px;
+    
+}
+
+#copyBtnImg {
+    max-width: 45px;   
+}
+
+#printButton {
+    max-width: 60px;
+    position: fixed;
+    left: 1260px;
+    top: 120px;  
+}
+
+#printBtnImg {
+    max-width: 45px;   
+}
+
+#phonoCheckBox {
+    width: 200px;
+    height: 58px;
+    position: fixed;
+    left: 1260px;
+    top: 185px;
+    border: 2px solid black;
+}
+
+#diacriticsButtonsDiv {
+    position: fixed;
+    left: 1260px;
+    top: 262px;
+    border: 2px solid black;
+}
+
+.diacriticsButtonsRow {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    margin: 2px;
+}
+
+.diacritics {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.diacriticsLabels {
+    font-size: 22px;
+    text-emphasis: bold;
+}
+
+.diacriticsLabelsDouble {
+    font-size: 17px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+
+#prSelectorLabel {
+    margin-top:1px;
+    margin-bottom: 7px;
+}
+
+select {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: inherit;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#prSelect {
+    margin-top: 13px;
+    margin-left: 5px;
+    width: 145px;
+}
+
+#googleDoc {
+    margin-top: 30px;
+    /* margin-left: 145px; */
+    display: flex
+    
+}
+
+#narratorDiv {
+    width: 200px;
+}
+
+
+
+#narratorListLink {
+    font-size: 20px;
+    color: crimson;
+    text-decoration: none;
+
+}
+
+#producerDiv {
+    margin-left: 8px;
+    margin-right: 23px;
+    width: 220px;
+    border-right: 2px solid rgba(100, 93, 93);
+}
+
+#producerListLink {
+    font-size: 20px;
+    color: crimson;
+    text-decoration: none;
+
+}
+
+#pre2Warning {
+    /* margin-left: 145px; */
+}
+
+#tempDiv {
+    max-width: 440px;
+    margin-left: 145px;
+}
+
+
+/* @media print {
+    #footer {
+      position: fixed;
+      bottom: 0;
+    }
+  } */
+
+
+
+/* strong {
+  font-weight: bold;
+} */

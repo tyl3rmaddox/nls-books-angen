@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NLS Books AnGen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h4 id="subHeading"> NLS Books <br> Announcements Generator</h3>
+    <img id="imgHeading" src="assets/APH logo.jpg">
+    <div id="toolbar">
+        <div id="opfButton">
+            <h3 id="opfButtonLabel">Select Your OPF file</h5>
+                <input id="opfFile" type="file">
+        </div>
+
+        <div id='narratorDiv'>
+            <h3 id="narratorSelectorLabel">Narrator</h3> 
+            <select id="narratorSelect">
+                <option disabled selected value="[SELECT NARRATOR]">Select an option</option>
+                <option value="Barry Bernson">Bernson, Barry</option>
+                <option value="Bill Burton">Burton, Bill</option>
+                <option value="Madelyn Buzzard">Buzzard, Madelyn</option>
+                <option value="Theresa Conkin">Conkin, Theresa</option>
+                <option value="Kerry Dukin">Dukin, Kerry</option>
+                <option value="Ray Foushee">Foushee, Ray</option>
+                <option value="Jack Fox">Fox, Jack</option>
+                <option value="Jill Fox">Fox, Jill</option>
+                <option value="Lou Harpenau">Harpenau, Lou</option>
+                <option value="Jennifer Hubbard">Hubbard, Jennifer</option>
+                <option value="Jon Huffman">Huffman, Jon</option>
+                <option value="Bruce Huntey">Huntey, Bruce</option>
+                <option value="Erin Jones">Jones, Erin</option>
+                <option value="Abigail Maupin">Maupin, Abigail</option>
+                <option value="Gregory Maupin">Maupin, Gregory</option>
+                <option value="Andy Pyle">Pyle, Andy</option>
+                <option value="Gary Tipton">Tipton, Gary</option>
+                <option value="Alec Volz">Volz, Alec</option>
+                <option value="Teresa Willis">Willis, Teresa</option>
+            </select>
+        </div>
+
+        <div id="levelSelector">
+            <h3 id="levelSelectorLabel">Navigation Level</h3>    
+
+            <div id="navSelect">
+                <input type="radio" id="send_poll" name="nav" value="one" />One level<br/>      
+                <input type="radio" id="send_poll" name="nav" value="two" />Two level<br/>
+                <input type="radio" id="send_poll" name="nav" value="three" />Three level<br/> 
+                <input type="radio" id="send_poll" name="nav" value="four" />Four level<br/>           
+            </div>
+
+
+        </div>
+        <div id='dtbTypeDiv'>
+			<h3 id="dtbTypeLabel">DTB Type</h3> 
+                <input type="radio" id="booktype" name="booktype" value="regular_dtb" checked="checked" />Regular<br/>      
+                <input type="radio" id="booktype" name="booktype" value="multibook" />Multi-Book<br/>
+                <input type="radio" id="booktype" name="booktype" value="childrens_book" />Childrens Book<br/>
+        </div>
+        <div id='specialsDiv'>
+            <h3 id="specialsLabel">Other Options</h3> 
+                <input type="checkbox" id="rn_select" name="other_option1" value="readers_note"/>Reader's Note<br/>  
+                <input type="checkbox" id="nr_select" name="other_option2" value="new_recording"/>New Recording<br/>      
+                <input type="checkbox" id="pn_select" name="other_option3" value="previous_narrator" />Previous Narrator<br/>
+        </div>
+
+        <div id='copyButtonDiv'>
+            <button id= "copyButton" class="btn" data-clipboard-action="copy" data-clipboard-target="#openClose">
+                <img src="assets/donotcopy.png" id="copyBtnImg" alt="Copy to clipboard">
+            </button>
+        </div>
+        <div id="printButtonDiv">
+            <button id= "printButton" class="btn">
+                <img src="assets/print.png" id="printBtnImg">
+            </button>           
+        </div>
+        <div id="phonoCheckBox"> 
+            <span id='readersNote'><a id="testing" href="https://docs.google.com/document/d/1u0ciK5chxkUIdplokyJ3qrUPCcL394tVvu3lvpMvdNI/edit?usp=sharing" target="_blank">Reader's Note Resource</a></p></span>
+            <span id='multiBookInstructions'><a id="testing" href="https://docs.google.com/document/d/1-GYiMZHaGL0ghWrQlhajJuAcryFrA1xIUFoSCFkLqd4/edit?usp=sharing" target="_blank">Multi-Title Instructions Summary</a></p></span>
+        </div>
+
+        <div id="diacriticsButtonsDiv">
+            <div id="a_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortA" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ă'); ">
+                    <label class="diacriticsLabels" for="diacritics">ă</label>
+                </button>
+                <button class="diacritics" id= "longA" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ā'); ">
+                    <label class="diacriticsLabels" for="diacritics">ā</label>
+                </button>
+                <button class="diacritics" id= "circumflexA" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('â'); ">
+                        <label class="diacriticsLabels" for="diacritics">â</label>
+                </button>
+                <button class="diacritics" id= "doubledotA" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ä'); ">
+                        <label class="diacriticsLabels" for="diacritics">ä</label>
+                </button>
+            </div>
+            
+            <div id="e_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortE" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ĕ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ĕ</label>
+                </button>
+                <button class="diacritics" id= "longE" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ē'); ">
+                    <label class="diacriticsLabels" for="diacritics">ē</label>
+                </button>
+            </div>
+
+            <div id="i_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortI" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ĭ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ĭ</label>
+                </button>
+                <button class="diacritics" id= "longI" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ī'); ">
+                    <label class="diacriticsLabels" for="diacritics">ī</label>
+                </button>
+            </div>
+
+            <div id="o_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortO" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ŏ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ŏ</label>
+                </button>
+                <button class="diacritics" id= "longO" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ō'); ">
+                    <label class="diacriticsLabels" for="diacritics">ō</label>
+                </button>
+                <button class="diacritics" id= "circumflexO" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ô'); ">
+                    <label class="diacriticsLabels" for="diacritics">ô</label>
+                </button>
+            </div>
+
+            <div id="double_o_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortDoubleO" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('o͝o'); ">
+                    <label class="diacriticsLabelsDouble" for="diacritics">o͝o</label>
+                </button>
+                <button class="diacritics" id= "longDoubleO" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ōō'); ">
+                    <label class="diacriticsLabelsDouble" for="diacritics">ōō</label>
+                </button>
+            </div>
+
+            <div id="u_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "shortU" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ŭ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ŭ</label>
+                </button>
+                <button class="diacritics" id= "circumflexU" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('û'); ">
+                    <label class="diacriticsLabels" for="diacritics">û</label>
+                </button>
+            </div>
+
+            <div id="others_row" class="diacriticsButtonsRow">
+                <button class="diacritics" id= "schwa" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ə'); ">
+                    <label class="diacriticsLabels" for="diacritics">ə</label>
+                </button>
+                <!-- <button class="diacritics" id= "ng" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ŋ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ŋ</label>
+                </button> -->
+                <button class="diacritics" id= "softTH" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('th'); ">
+                    <label class="diacriticsLabels" for="diacritics"><span class="strikethrough">th</span></label>
+                </button>
+                <button class="diacritics" id= "nasalN" onclick="document.getElementById('test').focus(); pasteHtmlAtCaret('ⁿ'); ">
+                    <label class="diacriticsLabels" for="diacritics">ⁿ</label>
+                </button>
+            </div>
+    
+        </div>
+        
+        
+
+
+
+
+    </div>
+
+
+
+    <br><br>
+            
+    <div contenteditable="true" id="openClose">
+        <h1 id="test"></h1>
+
+        {1} <b><span class="dtbTitle"></span></b> {m}<br><br>
+        by <b><span class="dtbAuth"></span></b> {m}<br><br>
+        DB <b><span id="dbNumber"></span></b><br><br>
+        Copyright <b><span id="sourceRights"></span></b><br><br>
+        <span id="newRecordingSpan">This is a new recording of: <span style="color:red"><b>DB#</b></span> <br><br></span>
+        Read by: <b><span class="narrator"></span></b><br><br>
+        <span id="previousNarratorSpan"><span style="color:red"><b>BLANK</b></span> was unavailable to continue reading of this series.  <br><br></span>
+        This book contains <b><span style="color:red">BLANK</span></b> pages. <br>
+        Approximate reading time: ____ hours, ____ minutes. <br><br>
+
+        
+        <span id="oneLevelText">This book contains markers allowing direct access to the <b><span style="color:red">CONTENTS_PARTS_and_ETC</span></b>.</span>
+        
+        <span id="twoLevelText">This book contains markers allowing direct access to: at level 1 the <b><span style="color:red">CONTENTS_PARTS_and_ETC</span></b> and at level 2 the <b><span style="color:red">SECTIONS_CHAPTERS_and_ETC</span></b>.</span> 
+        
+        <span id="threeLevelText">This book contains markers allowing direct access to: at level 1 the <b><span style="color:red">CONTENTS_PARTS_and_ETC</span></b>; at level 2 the <b><span style="color:red">SECTIONS_CHAPTERS_and_ETC</span></b>; and at level 3 the <b><span style="color:red">SUBSECTIONS_EXERCISES_and_ETC</span></b>.</span> 
+
+        <span id="fourLevelText">This book contains markers allowing direct access to: at level 1 the <b><span style="color:red">CONTENTS_PARTS_and_ETC</span></b>; at level 2 the <b><span style="color:red">SECTIONS_CHAPTERS_and_ETC</span></b>; at level 3 the <b><span style="color:red">SUBSECTIONS_EXERCISES_and_ETC</span></b>; and at level 4 the <b><span style="color:red">SUBSECTIONS_EXERCISES_and_ETC</span></b>.</span> 
+        <br><br>
+        
+        {1} <b>Library of Congress Annotation:</b> {m} <br> <span id="locAnnotation"></span> 
+
+        <br><br>
+
+        From The Book Jacket:<br>
+        About The Author: <br>
+        Other Books By: <br> <br>
+
+        <span id="readersNoteSpan">{8} Reader's Note: {7}<br><br></span>
+
+        <hr>
+        <br>
+
+
+        {1} End of: <b><span class="dtbTitle"></span></b> <br><br>
+        by <b><span class="dtbAuth"></span></b> {m} (SPELL) <br><br>
+
+        Read by: <b><span class="narrator"></span></b>
+        in the studios of the American Printing House for the Blind, Louisville, Kentucky, for the Library of Congress, _________, <span id="date"></span>.
+
+        <br><br>
+
+        Published by: <span style="color:red"><b>BLANK</b></span>
+
+        <br><br>
+
+        Further reproduction or distribution in other than a specialized format is prohibited. If you found this book to be defective, please contact your cooperating network library.
+
+       
+ 
+    </div>
+
+    <div contenteditable="true" id="openCloseMultibook">
+
+        <b><span class="dtbTitle"></b></span> {m}<br><br>
+        by <b><span class="dtbAuth"></span></b><br><br>
+        DB <b><span class="dbNumber"></span></b><br><br> 
+        <!-- The DB# needs the same treatment as title/author where it is a looped function to apply to this later div -->
+        
+        Approximate reading time: [<b><span style="color:red">00</span></b>] hours, [<b><span style="color:red">00</span></b>] minutes. <br><br>
+
+        <br><br>
+        <hr>
+        <br><br>
+
+
+        End of: <b><span class="dtbTitle"></span></b> <br><br>
+        by <b><span class="dtbAuth"></span></b> {m} (SPELL)
+
+        <br><br>
+
+        Further reproduction or distribution in other than a specialized format is prohibited. If you found this book to be defective, please contact your cooperation network library.
+
+
+ 
+    </div>
+    
+	<div id="tempDiv">
+    <a href="https://docs.google.com/document/d/1tFcjporU5kf52qQMpN8PQGNyUtRLmFHbskW467tEA7k/edit?usp=sharing " target="_blank">User Guide</a></p>           
+    <a href="https://docs.google.com/document/d/1aJbBiqmN8JEq5Vgr-dw5SXs_8ygwHMWSNNOLM25TetA/edit?usp=sharing" target="_blank">Version 1.02</a></p>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
+    <script src="xmlreader.js"></script>
+    <script src="dist/clipboard.min.js"></script>
+    <script src="copydiv.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="navbuttons.js"></script>
+    <script src="multibook.js"></script>
+    <script src="otheroptions.js"></script>
+    <script src="printdiv.js"></script>
+    <script src="prchange.js"></script>
+    <script src="diacriticsbuttons.js"></script>
+    <script src="date.js"></script>
+</body>
+</html>
